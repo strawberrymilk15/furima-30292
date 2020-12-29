@@ -16,39 +16,40 @@
 ### Association
 
 - has_many :items
-- has_one  :purchases
+- has_many :purchases
 
 ## items テーブル
 
 | Column                     | Type          | Options               |
 |----------------------------|---------------|-----------------------|
 | name                       | string        | null: false           |
-| category                   | string        | null: false           |
+| category                   | integer       | null: false           |
 | price                      | integer       | null: false           |
-| product_condition          | string        | null: false           |
+| product_condition_id       | integer       | null: false           |
 | description_of_item        | text          | null: false           |
-| shipping_charge            | string        | null: false           |
-| shipment_source_id         | integer       | null: false           |
-| date_of_shipment           | string        | null: false           |
-| user                       | reference     |
+| shipping_charge_id         | integer       | null: false           |
+| prefecture_id              | integer       | null: false           |
+| date_of_shipment_id        | integer       | null: false           |
+| user                       | reference     | foreign_key: true     |
 
 ### Association
 
 - belongs_to :user
-- has_one  :purchases
+- has_one  :purchase
 
 
 ## purchases テーブル
 
 | Column                     | Type          | Options               |
 |----------------------------|---------------|-----------------------|
-| user                       | reference     |
-| item                       | reference     |
+| user                       | reference     | foreign_key: true     |
+| item                       | reference     | foreign_key: true     |
 
 ### Association
 
 - belongs_to :item
 - belongs_to :user
+- has_one    :address
 
 ## addresses テーブル
 
@@ -60,8 +61,8 @@
 | address                    | string        | null: false           |
 | building_name              | string        |
 | phone_number               | string        | null: false           |
-| purchases                  | reference     |
+| purchase                   | reference     | foreign_key: true     |
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :purchase
