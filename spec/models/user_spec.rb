@@ -35,7 +35,7 @@ RSpec.describe User, type: :model do
 
     it '重複したemailが存在する場合登録できないこと' do
       @user.save
-      another_user =FactoryBot.build(:user, email: @user.email)
+      another_user = FactoryBot.build(:user, email: @user.email)
       another_user.valid?
       expect(another_user.errors.full_messages).to include("Email has already been taken")
     end
@@ -49,7 +49,7 @@ RSpec.describe User, type: :model do
     it "encrypted_passwordがない場合は登録できない事" do
       @user.encrypted_password =nil
       @user.valid?
-      expect(@user.errors.full_messages).to include()
+      expect(@user.errors.full_messages).to include("Encrypted password can't be blank")
     end
 
     it "パスワードに英小文字が含まれない場合無効な状態である事" do
