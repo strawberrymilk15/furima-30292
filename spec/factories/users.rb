@@ -10,7 +10,7 @@ FactoryBot.define do
     first_name_kana_notation  {Gimei.first.katakana}
     last_name_kana_notation  {Gimei.last.katakana}
     birth_day {Faker::Date.backward}
-    password = Faker::Internet.password(min_length: 6)
+    password =  '1a' + Faker::Internet.password(min_length: 6)
     password {password}
     password_confirmation {password}
   end
