@@ -108,7 +108,7 @@ RSpec.describe User, type: :model do
     end
 
     it "first_nameに一つでも英語表記があれば無効である事" do
-      @user.first_name = 'Ａ' + 'あ' + 'い' * 4
+      @user.first_name = 'test'
       @user.valid?
       expect(@user.errors.full_messages).to include("First name is invalid")
     end
@@ -126,7 +126,7 @@ RSpec.describe User, type: :model do
     end
 
     it "last_nameに一つでも英語表記があれば無効である事" do
-      @user.last_name = 'Ａ' + 'あ' + 'い' * 4
+      @user.last_name = 'test'
       @user.valid?
       expect(@user.errors.full_messages).to include("Last name is invalid")
     end
@@ -144,7 +144,7 @@ RSpec.describe User, type: :model do
     end
 
     it "first_name_kana_notationに一つでも英語表記があれば無効である事" do
-      @user.first_name_kana_notation = 'Ａ' + 'ア' + 'イ' * 4
+      @user.first_name_kana_notation = 'test'
       @user.valid?
       expect(@user.errors.full_messages).to include("First name kana notation is invalid")
     end
@@ -162,7 +162,7 @@ RSpec.describe User, type: :model do
     end
 
     it "last_name_kana_notationに一つでも英語表記があれば無効である事" do
-      @user.last_name_kana_notation = 'Ａ' + 'ア' + 'イ' * 4
+      @user.last_name_kana_notation = 'test'
       @user.valid?
       expect(@user.errors.full_messages).to include("Last name kana notation is invalid")
     end
