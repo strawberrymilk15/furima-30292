@@ -1,12 +1,16 @@
 class Item < ApplicationRecord
-extend ActiveHash::Associations::ActiveRecordExtensions
+  extend ActiveHash::Associations::ActiveRecordExtensions
 
-belongs_to_active_hash :prefecture
-belongs_to_active_hash :category
-belongs_to_active_hash :product_condition
-belongs_to_active_hash :shipping_charge
-belongs_to_active_hash :date_of_shipment
+  belongs_to :category
+  belongs_to :date_of_shipment
+  belongs_to :prefecture
+  belongs_to :product_condition
+  belongs_to :shipping_charge
 
-belongs_to :user, optional: true
+  validates :name, :price, :description_of_item, :image, presence: true
 
-validates :prefecture, presence: true
+  validates :category_id, :date_of_shipment_id, :prefecture_id, :product_condition_id, :shipping_charge_id, numericality: { other_than: 0} 
+
+  belongs_to :user
+  has_one_attached :image
+end
