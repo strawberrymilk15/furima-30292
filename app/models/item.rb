@@ -7,7 +7,10 @@ class Item < ApplicationRecord
   belongs_to :product_condition
   belongs_to :shipping_charge
 
-  validates :name, :price, :description_of_item, :image, presence: true
+  validates :name, :description_of_item, :image, presence: true
+
+  validates :price, numericality:{ with: /\A[0-9]+\z/, message: 'should be half-width numbers' }
+
 
   validates :category_id, :date_of_shipment_id, :prefecture_id, :product_condition_id, :shipping_charge_id, numericality: { other_than: 0} 
 
