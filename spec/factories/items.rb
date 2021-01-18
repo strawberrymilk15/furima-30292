@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :item do
 
    name {Faker::Commerce.product_name}
-   price {Faker::Commerce.price}
+   price {8000}
    description_of_item {Faker::Lorem.sentence}
    category_id {2}
    date_of_shipment_id {2}

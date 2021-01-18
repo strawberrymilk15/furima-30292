@@ -11,20 +11,7 @@ RSpec.describe Item, type: :model do
           expect(@item).to be_valid
         end
 
-        it "priceは半角数字なら登録できること" do
-          @item.price = 800000
-          expect(@item).to be_valid
-        end
-
-        it "priceが300円以上で登録できること" do
-          @item.price >= 300
-          expect(@item).to be_valid
-        end
-
-        it "priceが9999999円以下で登録できること" do
-          @item.price <= 9999999
-          expect(@item).to be_valid
-        end
+      
       end
     
       context '出品機能がうまくいかないとき' do
@@ -37,6 +24,37 @@ RSpec.describe Item, type: :model do
 
     it "priceが空では登録できないこと" do
       @item.price = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price should be half-width numbers")
+    end
+
+    it "priceが299円以下では登録できないこと" do
+      @item.price = 299
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price should be half-width numbers")
+    end
+
+    it "priceが10000000円以上では登録できないこと" do
+      @item.price = 10000000
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price should be half-width numbers")
+    end
+
+    it "priceが全角文字では登録できないこと" do
+      @item.price = '８００００'
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price should be half-width numbers")
+    end
+
+    it "priceが英数混合では登録できないこと" do
+      @item.price = '1j3m2k'
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price should be half-width numbers")
+    end
+
+
+    it "priceが半角英語のみでは登録できないこと" do
+      @item.price = 'hguheuha'
       @item.valid?
       expect(@item.errors.full_messages).to include("Price should be half-width numbers")
     end
