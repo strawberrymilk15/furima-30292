@@ -121,15 +121,15 @@
   <%# /FURIMAの特徴 %>
 
   <%# 商品一覧 %>
-  <%if Item.exists?%>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <% link_to items_path , class: "subtitle" %>
     <ul class='item-lists'>
+      <%if Item.exists?%>
         <% @items.each do |item| %>
       <li class='list'>
         <div class='item-img-content'>
-          <%= image_tag item.image, class: "item-img" if item.image.attached? %>
+          <%= image_tag item.image, class: "item-img"  %>
 
 
           <div class='sold-out'>
