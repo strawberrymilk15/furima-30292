@@ -7,7 +7,9 @@ class Item < ApplicationRecord
   belongs_to :product_condition
   belongs_to :shipping_charge
 
-  validates :name, :description_of_item, :image, presence: true
+  validates :name, :description_of_item, presence: true
+
+  validates :image, presence: true, unless: :was_attached?
 
   validates :price, numericality:{ with: /\A[0-9]+\z/,greater_than_or_equal_to: 300 , less_than_or_equal_to: 9999999,message: 'should be half-width numbers' }
 
@@ -16,4 +18,8 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
+
+  def was_attached?
+    self.image.attached?
+  end
 end
