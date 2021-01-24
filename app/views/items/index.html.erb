@@ -123,14 +123,15 @@
   <%# 商品一覧 %>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
-    <% link_to items_path , class: "subtitle" %>
+    <%= link_to '#' , class: "subtitle" %>
     <ul class='item-lists'>
       <%if Item.exists?%>
         <% @items.each do |item| %>
       <li class='list'>
+        <%= link_to item_path(item.id) do %>
         <div class='item-img-content'>
           <%= image_tag item.image, class: "item-img"  %>
-
+        <%end%>
 
           <div class='sold-out'>
             <span>Sold Out!!</span>
@@ -149,10 +150,10 @@
             </div>
           </div>
         </div>
+        <%end%>
       </li>
-    <% end %>
-
-    <%else%>
+      <%else%>
+   
       <li class='list'>
         <%= link_to '#' do %>
         <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
@@ -168,8 +169,9 @@
             </div>
           </div>
         </div>
-        <% end %>
         <%end%>
+        <%end%>
+       
       </li>
     </ul>
   </div>
