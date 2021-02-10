@@ -1,0 +1,53 @@
+class OrdersController < ApplicationController
+ before_action :itemer,:log_user_show,:log_user_sold
+ before_action :authenticate_user!, only: :index
+
+  def index
+    @purchase = PurchaseForm.new
+    @item =Item.find(params[:item_id])
+  end
+
+  def create
+   @purchase = PurchaseForm.new(set_params)
+   if @purchase.valid?
+    pay_item
+    @purchase.save
+    return redirect_to root_path
+   else
+    render 'index'
+   end
+  end
+
+  private
+
+  def set_params
+    params.require(:purchase_form).permit(:address_number,:prefecture_id,:municipalities,:address,:building_name,:phone_number).merge(token: params[:token],user_id: current_user.id,item_id: params[:item_id])
+  end
+
+  def pay_item
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp::Charge.create(
+      amount: @item.price,
+      card: set_params[:token],
+      currency: 'jpy'
+    )
+  end
+
+  def itemer
+    @item =Item.find(params[:item_id])
+  end
+
+  def log_user_show
+    @item = Item.find(params[:item_id])
+    if current_user == @item.user_id 
+      redirect_to root_path
+    end
+  end
+
+  def log_user_sold
+    @item = Item.find(params[:item_id])
+    if user_signed_in? && @item.purchase.present?
+      redirect_to root_path
+    end
+  end
+end
