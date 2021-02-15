@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
- before_action :itemer,:log_user_show
+ before_action :logout_user_show
+ before_action :itemer
+ before_action :log_user_show
  before_action :authenticate_user!, only: :index
 
   def index
@@ -39,6 +41,12 @@ class OrdersController < ApplicationController
   def log_user_show
     if current_user == @item.user_id? || @item.purchase.present?
       redirect_to root_path
+    end
+  end
+
+  def logout_user_show
+    unless user_signed_in?
+      redirect_to "/users/sign_in"
     end
   end
 
