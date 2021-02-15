@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
- before_action :itemer,:log_user_show,:log_user_sold
+ before_action :itemer,:log_user_show
  before_action :authenticate_user!, only: :index
 
   def index
@@ -39,15 +39,10 @@ class OrdersController < ApplicationController
 
   def log_user_show
     @item = Item.find(params[:item_id])
-    if current_user == @item.user_id 
+    if current_user == @item.user_id? || @item.purchase.present?
       redirect_to root_path
     end
   end
 
-  def log_user_sold
-    @item = Item.find(params[:item_id])
-    if user_signed_in? && @item.purchase.present?
-      redirect_to root_path
-    end
-  end
+
 end

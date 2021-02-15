@@ -7,6 +7,10 @@ FactoryBot.define do
     address {"永田町"}
     phone_number {"12345678912"}
 
+    token {"tok_501199290762d71a5f366bb3ee7c"}
+    
+    association :user,factory: :user
+    association :item,factory: :item
 
   end
 end

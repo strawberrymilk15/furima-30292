@@ -5,7 +5,7 @@ class PurchaseForm
 
   with_options presence: true do
 
-   validates :municipalities,:address
+   validates :municipalities,:address,:token,:user_id,:item_id
 
    validates :prefecture_id,numericality: { other_than: 0,message: 'Please select'}
 
@@ -15,7 +15,7 @@ class PurchaseForm
 
   end
   def save
-     Address.create(address_number: address_number,prefecture_id: prefecture_id,municipalities: municipalities,address: address,building_name: building_name,phone_number: phone_number)
-     Purchase.create(user_id: user_id,item_id: item_id)
+    purchase=Purchase.create(user_id: user_id,item_id: item_id)
+    Address.create(address_number: address_number,prefecture_id: prefecture_id,municipalities: municipalities,address: address,building_name: building_name,phone_number: phone_number,purchase_id: purchase.id)
   end
 end
