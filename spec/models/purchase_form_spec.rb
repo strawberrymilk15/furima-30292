@@ -15,6 +15,11 @@ describe '商品購入機能' do
       expect(@purchase_form).to be_valid
     end
 
+    it "building_nameが空でも登録できる事" do
+      @purchase_form.building_name = nil
+      expect(@purchase_form).to be_valid
+    end
+
   end
 
   context '商品購入が上手くいかない時' do
@@ -36,6 +41,12 @@ describe '商品購入機能' do
       @purchase_form.valid?
       expect(@purchase_form.errors.full_messages).to include("Prefecture can't be blank", "Prefecture Please select")
     end
+
+     it "prefecture_idが0以外出なければ登録できない事" do
+      @purchase_form.prefecture_id = 0
+      @purchase_form.valid?
+      expect(@purchase_form.errors.full_messages).to include("Prefecture Please select")
+     end
 
     it "municipalitiesが空では登録できないこと" do
       @purchase_form.municipalities = nil
@@ -79,6 +90,12 @@ describe '商品購入機能' do
       @purchase_form.item_id = nil
       @purchase_form.valid?
       expect(@purchase_form.errors.full_messages).to include("Item can't be blank")
+    end
+
+    it "電話番号が１２桁以上では登録できない事" do
+      @purchase_form.phone_number = "123456789123"
+      @purchase_form.valid?
+      expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
     end
 
   end
