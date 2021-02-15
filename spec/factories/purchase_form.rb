@@ -6,11 +6,10 @@ FactoryBot.define do
     municipalities {"千代田区"}
     address {"永田町"}
     phone_number {"12345678912"}
+    building_name {"ワクワクハウス"}
 
     token {"tok_501199290762d71a5f366bb3ee7c"}
     
-    association :user,factory: :user
-    association :item,factory: :item
 
   end
 end
