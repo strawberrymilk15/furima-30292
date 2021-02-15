@@ -73,6 +73,12 @@ describe '商品購入機能' do
       expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
     end
 
+    it "phone_numberが英数混合では登録できないこと" do
+      @purchase_form.phone_number = '12g1h2h3h33'
+      @purchase_form.valid?
+      expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
+    end
+
     it "tokenが空では登録できない" do
       @purchase_form.token = nil
       @purchase_form.valid?

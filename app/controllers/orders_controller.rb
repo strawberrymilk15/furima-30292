@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
- before_action :logout_user_show
  before_action :itemer
  before_action :log_user_show
- before_action :authenticate_user!, only: :index
+ before_action :authenticate_user!, only: :index,:create
 
   def index
     @purchase = PurchaseForm.new
@@ -44,11 +43,7 @@ class OrdersController < ApplicationController
     end
   end
 
-  def logout_user_show
-    unless user_signed_in?
-      redirect_to "/users/sign_in"
-    end
-  end
+
 
 
 end
