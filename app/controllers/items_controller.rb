@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :log_user_edit, only: :edit
+  before_action :authenticate_user!, only: [:new,:edit]
 
   def index
     @items = Item.order("created_at DESC").includes(:user)
@@ -27,8 +28,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
-     if @item.update(item_params)
+    if @item.update(item_params)
       redirect_to item_path
      else
       render :edit
@@ -49,5 +49,10 @@ class ItemsController < ApplicationController
   end
 
 
+  def log_user_edit
+    @item = Item.find(params[:id])
+    if current_user.id != @item.user_id
+      redirect_to root_path
+    end
+  end
 end
-

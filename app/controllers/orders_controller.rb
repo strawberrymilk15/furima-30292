@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   end
 
   def log_user_show
-    if current_user == @item.user_id? || @item.purchase.present?
+    if current_user == @item.user_id || @item.purchase.present?
       redirect_to root_path
     end
   end
