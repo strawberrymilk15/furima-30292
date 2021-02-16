@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
  before_action :itemer
  before_action :log_user_show
- before_action :authenticate_user!, only: :index,:create
+ before_action :authenticate_user!, only: [:index,:create]
 
   def index
     @purchase = PurchaseForm.new
