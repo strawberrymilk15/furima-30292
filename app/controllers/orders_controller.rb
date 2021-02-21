@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
  before_action :itemer
- before_action :log_user_show
  before_action :authenticate_user!, only: [:index,:create]
+ before_action :log_user_show
 
   def index
     @purchase = PurchaseForm.new
@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   end
 
   def log_user_show
-    if current_user == @item.user_id || @item.purchase.present?
+    if current_user.id == @item.user_id || @item.purchase.present?
       redirect_to root_path
     end
   end

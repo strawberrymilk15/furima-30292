@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:log_user_edit,:show,:edit,:update,:destroy]
-  before_action :log_user_edit, only: [:edit,:update]
   before_action :authenticate_user!, except: [:index,:show]
-
+  before_action :log_user_edit, only: [:edit,:update]
+  
   def index
     @items = Item.order("created_at DESC").includes(:user)
   end
