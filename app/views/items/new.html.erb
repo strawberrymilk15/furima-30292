@@ -21,9 +21,14 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%# f.file_field :image, id:"item-image" %>
-        <div class="view_box">
-          <input type="file" class="file">
+        <%= f.file_field :images, name: 'item[images][]', id:"item-image" %>
+        <div id="image-list">
+        <style>
+        .image-size {
+          width:120px;
+          height:120px;
+        }
+        </style>
         </div>
       </div>
     </div>

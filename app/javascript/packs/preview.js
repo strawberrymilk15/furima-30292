@@ -1,38 +1,40 @@
-$(document).ready(function(){
-  var view_box = $('.view_box');
+if (document.URL.match(/new/) || document.URL.match(/edit/)){
+document.addEventListener('DOMContentLoaded', function(){
+  const ImageList = document.getElementById('image-list');
 
-  $(".file").on('change', function(){
-    var fileprop = $(this).prop('files')[0],
-    find_img = $(this).next('img'),
-    fileRdr = new FileReader();
+  const createImageHTML = (blob) => {
+    const imageElement = document.createElement('div');
+    imageElement.setAttribute('class', "image-element");
+    let imageElementNum = document.querySelectorAll('.image-element').length
 
-    if(find_img.length){
-      find_img.nextAll().remove();
-      find_img.remove();
-    }
+    const blobImage = document.createElement('img');
+    blobImage.setAttribute('src', blob);
+    blobImage.setAttribute('class', 'image-size');
 
-    var img = '<img width="200" alt="" class="img_view"><a href="#" class="img_del">画像を削除する</a>';
-     view_box.append(img);
+    const inputHTML = document.createElement('input')
+    inputHTML.setAttribute('id', `item-image-${imageElementNum}`)
+    inputHTML.setAttribute('name', 'item[images][]')
+    inputHTML.setAttribute('type', 'file')
 
-     fileRdr.onload = function() {
-       view_box.find('img').attr('src', fileRdr.result);
-       img_del(view_box);
-     }
+    imageElement.appendChild(blobImage);
+    imageElement.appendChild(inputHTML)
+    ImageList.appendChild(imageElement);  
 
-     fileRdr.readAsDataURL(fileprop);
+    inputHTML.addEventListener('change', (e) => {
+      file = e.target.files[0];
+      blob = window.URL.createObjectURL(file);
+
+      createImageHTML(blob)
+    })
+  };
+
+  document.getElementById('item-image').addEventListener('change', function(e){
+
+    const file = e.target.files[0];
+    const blob = window.URL.createObjectURL(file);
+
+    createImageHTML(blob);
+
   });
-
-  function img_del(target){
-    target.find("a.img_del").on('click',function(){
-
-      if(window.confirm('画像を削除します。\nよろしいですか？')){
-
-        $(this).parent().find('input[type=file]').val('');
-        $(this).parent().find('.img_view, br').remove();
-        $(this).remove();
-      }
-
-      return false;
-    });
-  }
 });
+}

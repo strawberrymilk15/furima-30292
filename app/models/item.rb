@@ -17,7 +17,7 @@ class Item < ApplicationRecord
   validates :category_id, :date_of_shipment_id, :prefecture_id, :product_condition_id, :shipping_charge_id, numericality: { other_than: 0} 
 
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
   has_one :purchase
 
   def was_attached?
