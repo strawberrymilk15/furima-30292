@@ -14,7 +14,7 @@ FactoryBot.define do
 
 
    after(:build) do |item|
-    item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png', content_type: 'image/png')
+    item.images.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png', content_type: 'image/png')
    end
 
   end

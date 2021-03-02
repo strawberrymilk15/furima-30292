@@ -27,81 +27,80 @@ describe '商品購入機能' do
     it "address_numberが空では登録できないこと" do
       @purchase_form.address_number= nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Address number can't be blank", "Address number is invalid")
+      expect(@purchase_form.errors.full_messages).to include("Address numberを入力してください", "Address numberは不正な値です")
     end
 
     it "address_numberが全角数字では登録できないこと" do
       @purchase_form.address_number= '１２３ー２３４５'
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Address number is invalid")
+      expect(@purchase_form.errors.full_messages).to include("Address numberは不正な値です")
     end
 
     it "prefecture_idが空では登録できないこと" do
       @purchase_form.prefecture_id = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Prefecture can't be blank", "Prefecture Please select")
+      expect(@purchase_form.errors.full_messages).to include("Prefectureを入力してください", "Prefectureは数値で入力してください")
     end
 
      it "prefecture_idが0以外出なければ登録できない事" do
       @purchase_form.prefecture_id = 0
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Prefecture Please select")
+      expect(@purchase_form.errors.full_messages).to include("Prefectureは0以外の値にしてください")
      end
 
     it "municipalitiesが空では登録できないこと" do
       @purchase_form.municipalities = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Municipalities can't be blank")
+      expect(@purchase_form.errors.full_messages).to include("Municipalitiesを入力してください")
     end
 
     it "addressが空では登録できないこと" do
       @purchase_form.address = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Address can't be blank")
+      expect(@purchase_form.errors.full_messages).to include("Addressを入力してください")
     end
 
 
     it "phone_numberが空では登録できないこと" do
       @purchase_form.phone_number = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Phone number can't be blank", "Phone number Input only number")
+      expect(@purchase_form.errors.full_messages).to include("Phone numberを入力してください", "Phone numberは不正な値です")
     end
 
     it "phone_numberが全角数字では登録できないこと" do
       @purchase_form.phone_number = '１２３４５６７８９１２'
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
+      expect(@purchase_form.errors.full_messages).to include("Phone numberは不正な値です")
     end
 
     it "phone_numberが英数混合では登録できないこと" do
       @purchase_form.phone_number = '12g1h2h3h33'
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
+      expect(@purchase_form.errors.full_messages).to include("Phone numberは不正な値です")
     end
 
     it "tokenが空では登録できない" do
       @purchase_form.token = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Token can't be blank")
+      expect(@purchase_form.errors.full_messages).to include("Tokenを入力してください")
     end
 
     it "user_idが空では登録できない" do
       @purchase_form.user_id = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("User can't be blank")
-      
+      expect(@purchase_form.errors.full_messages).to include("Userを入力してください")
     end
 
     it "item_idが空では登録できない" do
       @purchase_form.item_id = nil
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Item can't be blank")
+      expect(@purchase_form.errors.full_messages).to include("Itemを入力してください")
     end
 
     it "電話番号が１２桁以上では登録できない事" do
       @purchase_form.phone_number = "123456789123"
       @purchase_form.valid?
-      expect(@purchase_form.errors.full_messages).to include("Phone number Input only number")
+      expect(@purchase_form.errors.full_messages).to include("Phone numberは不正な値です")
     end
 
   end

@@ -11,7 +11,7 @@ class Item < ApplicationRecord
 
   validates :images, presence: true, unless: :was_attached?
 
-  validates :price, numericality:{ with: /\A[0-9]+\z/,greater_than_or_equal_to: 300 , less_than_or_equal_to: 9999999,message: 'should be half-width numbers' }
+  validates :price, numericality:{ with: /\A[0-9]+\z/,greater_than_or_equal_to: 300 , less_than_or_equal_to: 9999999 }
 
 
   validates :category_id, :date_of_shipment_id, :prefecture_id, :product_condition_id, :shipping_charge_id, numericality: { other_than: 0} 

@@ -7,11 +7,11 @@ class PurchaseForm
 
    validates :municipalities,:address,:token,:user_id,:item_id
 
-   validates :prefecture_id,numericality: { other_than: 0,message: 'Please select'}
+   validates :prefecture_id,numericality: { other_than: 0}
 
    validates :address_number,format:{with:  /\A\d{3}[-]\d{4}\z/}
 
-   validates :phone_number,format:{with:  /\A\d{11}\z/,message: 'Input only number'}
+   validates :phone_number,format:{with:  /\A\d{11}\z/}
 
   end
   def save
