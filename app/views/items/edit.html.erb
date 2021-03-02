@@ -24,6 +24,14 @@ app/assets/stylesheets/items/new.css %>
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :images, name: 'item[images][]', id:"item-image" %>
+        <div id="image-list">
+        <style>
+        .image-size {
+          width:120px;
+          height:120px;
+        }
+        </style>
+        </div>
       </div>
     </div>
     <%# /出品画像 %>

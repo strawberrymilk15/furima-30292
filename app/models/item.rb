@@ -9,7 +9,7 @@ class Item < ApplicationRecord
 
   validates :name, :description_of_item, presence: true
 
-  validates :image, presence: true, unless: :was_attached?
+  validates :images, presence: true, unless: :was_attached?
 
   validates :price, numericality:{ with: /\A[0-9]+\z/,greater_than_or_equal_to: 300 , less_than_or_equal_to: 9999999,message: 'should be half-width numbers' }
 
@@ -21,6 +21,6 @@ class Item < ApplicationRecord
   has_one :purchase
 
   def was_attached?
-    self.image.attached?
+    self.images.attached?
   end
 end
