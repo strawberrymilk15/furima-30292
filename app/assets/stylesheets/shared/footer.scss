@@ -17,13 +17,15 @@
 }
 
 .ad-footer-title {
-  font-size: 4vh;
+  font-size: 6vh;
   margin-bottom: 2vh;
+  color: azure;
 }
 
 .ad-footer-explain {
-  font-size: 3vh;
-  line-height: 30px;
+  font-size: 6vh;
+  line-height: 150px;
+  color: blanchedalmond;
 }
 
 /* //下部広告部分 */
@@ -31,8 +33,8 @@
 .footer {
   width: 100vw;
   padding: 5vh 0;
-  color: #FFF;
-  background-color: #272727;
+  color:azure;
+  background-color: maroon;
   text-align: center;
 }
 
@@ -47,22 +49,23 @@
 }
 
 .footer-content-head {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .footer-link {
   color: #FFF;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 30px;
 }
 
 .logo-white {
-  width: 20vh;
+  width: 54vh;
   vertical-align: bottom;
 }
 
 .footer>p {
-  font-size: 14px;
+  font-size: 35px;
+  color: burlywood;
 }

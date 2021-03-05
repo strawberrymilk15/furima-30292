@@ -16,8 +16,8 @@
 }
 
 .furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
+  width: 200px;
+  margin-right: 100px;
 }
 
 .search-form {
@@ -37,7 +37,7 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #3ccace;
+  background-color:maroon;
   padding: 8px;
 }
 
@@ -45,20 +45,37 @@
   width: 100%;
 }
 
-.nav {
-  font-size: 18px;
+.globa-nav {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  height: 50px;
   width: 100%;
-  padding: 1vh 0;
 }
 
-.lists-left {
+.nav-nav {
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-li {
+display: table-cell;
+vertical-align: middle;
+padding: 45px 20px;
+}
+
+.header-nav {
   display: flex;
-  min-width: 200px;
-
+  align-items: center;
 }
+
+.nav-list{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  color: darkolivegreen;
+}
+
 
 .category-list {
   text-decoration: none;

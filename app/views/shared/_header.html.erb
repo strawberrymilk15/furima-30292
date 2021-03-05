@@ -9,19 +9,21 @@
       </button>
     </form>
   </div>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
-      <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
-    </ul>
-    <ul class='lists-right'>
+  <nav class='globa-nav'>
+  <div class='header-nav'>
+    <ul class="nav-nav">
+      <li class="nav-li"><%= link_to 'カテゴリー', "#", class: "nav-list" %></li>
+      <li class="nav-li"><%= link_to 'ブランド', "#", class: "nav-list" %></li>
     <%if user_signed_in?%>
-      <li><%= link_to current_user.nickname,root_path, class: "user-nickname" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <li class="nav-li"><%= link_to current_user.nickname,root_path, class: "user-nickname" %></li>
+      <li class="nav-li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-list" %></li> 
       <%else%>
-      <li><%= link_to 'ログイン',new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録',new_user_registration_path , class: "sign-up" %></li>
-    </ul>
+      <li class="nav-li"><%= link_to 'ログイン',new_user_session_path, class: "nav-list" %></li>
+      <li class="nav-li"><%= link_to '新規登録',new_user_registration_path , class: "nav-list" %></li>
+      <li class="nav-li"><%= link_to 'Facebookで登録',user_facebook_omniauth_authorize_path,  method: :post,class: "nav-list" %></li>
+      <li class="nav-li"><%= link_to 'Googleで登録',user_google_oauth2_omniauth_authorize_path, method: :post,class: "nav-list" %></li>
+      </ul>
     <%end%>
   </div>
+  </nav>
 </header>
