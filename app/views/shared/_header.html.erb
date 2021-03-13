@@ -1,5 +1,5 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
+  <header class='top-page-header'>  
   <div class='search-bar-contents'>
     <%= link_to image_tag("furima-logo-color.png", class:"furima-icon"), "/" %>
     <form class="search-form" action="#">
@@ -9,8 +9,9 @@
       </button>
     </form>
   </div>
-  <nav class='globa-nav'>
-  <div class='header-nav'>
+
+    <nav class="globa-nav">
+    <div class="header-nav">
     <ul class="nav-nav">
       <li class="nav-li"><%= link_to 'カテゴリー', "#", class: "nav-list" %></li>
       <li class="nav-li"><%= link_to 'ブランド', "#", class: "nav-list" %></li>
@@ -24,6 +25,7 @@
       <li class="nav-li"><%= link_to 'Googleで登録',user_google_oauth2_omniauth_authorize_path, method: :post,class: "nav-list" %></li>
       </ul>
     <%end%>
+
   </div>
   </nav>
 </header>

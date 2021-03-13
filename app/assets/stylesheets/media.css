@@ -1,0 +1,70 @@
+@media(max-width:1024px){
+  img{
+    width: 100%;
+  }
+  .apple-btn,.google-btn{
+    width: auto;
+  }
+  .store-btn{
+    padding-left: 100px;
+  }
+  .service-title{
+    font-size: 5.4vh;
+  }
+  .reason-lists{
+    text-align: center;
+    justify-content: space-around;
+  }
+  .reason-lists>.list{
+    width: 28%;
+  }
+  .service-explain{
+    font-size: 3vh;
+  }
+  
+  .feature-lists>.list{
+    width: 28%;
+    text-align: center;
+  }
+  .title-contents{
+    width: 100%;
+  }
+  
+  .ad-footer-explain{
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+ 
+
+
+}
+
+@media(max-width:768px){
+  
+}
+
+
+
+@media(max-width:560px){
+  img{
+    width: 100%;
+  }
+  .search-form>.input-box{
+    text-align: center;
+    font-size: xx-small;
+  }
+  .service-title{
+    font-size: 5.2vh;
+  }
+  .search-bar-contents{
+    margin-left: 57px;
+  }
+  .nav-list{
+    font-size: 14px;
+    margin-left: 11px;
+  }
+  
+}
+
+
