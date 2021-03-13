@@ -35,36 +35,134 @@
     text-align: center;
   }
 
- 
-
-
-}
-
-@media(max-width:768px){
-  
 }
 
 
-
-@media(max-width:560px){
+@media(max-width:580px){
   img{
     width: 100%;
   }
+
+  .top-page-header{
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .search-form{
+    width: 61vh;
+    height: 5vh;
+    display: flex;
+    margin-bottom: 13px;
+    margin-right: 10px;
+
+  }
   .search-form>.input-box{
-    text-align: center;
-    font-size: xx-small;
+    width: 100%;
+    height: 5vh;
   }
   .service-title{
     font-size: 5.2vh;
   }
   .search-bar-contents{
-    margin-left: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .furima-icon{
+    width: 141px;
+    margin-left: -40px;
+  }
+  .globa-nav {
+    display: flex;
+    height: 89px;
+    width: 100%;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .nav-nav {
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+    display: none;
+    margin-bottom: 48px;
+  }
+  .nav-li {
+    display:none;
+    height: 50px;
   }
   .nav-list{
-    font-size: 14px;
-    margin-left: 11px;
+    color: dimgray;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
   }
-  
+  .store-btn{
+    display: contents;
+    margin-top: 24px;
+  }
+  .reason-lists>.list {
+    display: contents;
+  }
+  .reason-list-description {
+    margin-bottom: 14px;
+  }
+  .reason-list-number{
+    position: relative;
+    left: -102px;
+  }
+  .ad-title {
+    font-size: 5vh;
+  }
+  .feature-contents>.title{
+    font-size: 2.5vh;
+  }
+  .feature-contents{
+    padding-bottom: -1px;
+  }
+  .feature-lists>.list{
+    width: 100%;
+  }
+  .feature-list-text{
+    font-size: 20px;
+  }
+  .feature-list-description{
+    margin-bottom: 17px;
+  }
+  .item-contents>.title{
+    font-size: 4vh;
+  }
+  .item-lists>.list{
+    width:auto;
+  }
+  .ad-footer-explain{
+    font-size: 5vh;
+    line-height: 56px;
+    margin-top: 225px;
+  }
+  .logo-white{
+    width: 46vh;
+  }
+  .footer-contents {
+    margin-right: 20px;
+    margin-bottom: 5vh;
+    margin-left: 55px;
+  }
+  .footer-content-head{
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .footer-link{
+    font-size: 10px;
+    line-height: 28px;
+  }
+  .footer>p{
+    font-size: 14px;
+  }
 }
 
 
