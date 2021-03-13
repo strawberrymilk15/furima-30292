@@ -107,6 +107,7 @@
   }
   .reason-lists>.list {
     display: contents;
+    width: 100%;
   }
   .reason-list-description {
     margin-bottom: 14px;
