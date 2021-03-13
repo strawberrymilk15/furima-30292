@@ -9,10 +9,14 @@
       </button>
     </form>
   </div>
-
-    <nav class="globa-nav">
-    <div class="header-nav">
-    <ul class="nav-nav">
+    <div id="wrapper">
+    <p class="btn-gnavi">
+      <span></span>
+      <span></span>
+      <span></span>
+    </p>
+    <nav class="globa-nav" id="global-navi">
+    <ul class="menu">
       <li class="nav-li"><%= link_to 'カテゴリー', "#", class: "nav-list" %></li>
       <li class="nav-li"><%= link_to 'ブランド', "#", class: "nav-list" %></li>
     <%if user_signed_in?%>
@@ -26,6 +30,6 @@
       </ul>
     <%end%>
 
-  </div>
   </nav>
+  </div>
 </header>
