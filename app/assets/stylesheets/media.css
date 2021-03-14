@@ -169,6 +169,10 @@
   .furima-details{
     width: 30%;
   }
+
+  .list img{
+    height: auto;
+  }
   
 
   .footer-content-head{
