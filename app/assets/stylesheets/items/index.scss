@@ -36,16 +36,17 @@ a {
 
 .store-btn {
   display: flex;
+  width: 100%;
   margin-top: 24px;
 }
 
 .apple-btn {
   margin-right: 1vw;
-  height: 9vh;
+  height: 7vh;
 }
 
 .google-btn {
-  height: 9vh;
+  height: 7vh;
 }
 
 /* //画面上部の「人生を変えるフリマアプリ」帯部分 */
@@ -103,7 +104,7 @@ a {
   font-size: 30px;
   text-align: center;
   line-height: 60px;
-  background-color:maroon;
+  background-color:darkcyan;
   color: #fff;
 }
 
@@ -156,6 +157,7 @@ a {
 
 .store-btn {
   display: flex;
+  width: 100%;
   margin-top: 24px;
 }
 

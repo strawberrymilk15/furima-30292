@@ -8,8 +8,8 @@
 #wrapper nav ul li{
   display:inline-block;
   font-size: 16px;
-  padding:  30px 20px 25px 28px;
+  padding:  18px 20px 25px 0px;
   }
   #wrapper nav ul li a{
-  color: #ddd
+  color:gray;
   }

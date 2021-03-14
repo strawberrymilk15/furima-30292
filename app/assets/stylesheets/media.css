@@ -3,11 +3,9 @@
     width: 100%;
   }
   .apple-btn,.google-btn{
-    width: auto;
+    width: 100%;
   }
-  .store-btn{
-    padding-left: 100px;
-  }
+  
   .service-title{
     font-size: 5.4vh;
   }
@@ -19,7 +17,9 @@
     width: 28%;
   }
   .service-explain{
-    font-size: 3vh;
+    font-size: 2vh;
+    margin-top: 22px;
+    line-height: 50px;
   }
   
   .feature-lists>.list{
@@ -61,7 +61,8 @@
     height: 5vh;
   }
   .service-title{
-    font-size: 5.2vh;
+    font-size: 3.2vh;
+    text-align: center;
   }
   .search-bar-contents{
     display: flex;
@@ -103,8 +104,13 @@
     line-height: 1;
   }
   .store-btn{
-    display: contents;
+    display: flex;
     margin-top: 24px;
+    width: 100%;
+    height: 7vh;
+  }
+  .apple-btn,.google-btn{
+    height: 7vh;
   }
   .reason-lists>.list {
     display: contents;
@@ -174,10 +180,10 @@
     position: fixed;
     top: 0;
     right: -300px;
-    width: 300px;
+    width: 209px;
     height: 100%;
     padding-top: 50px;
-    background:#333;
+    background:rosybrown;
     font-size: 16px;
     box-sizing: border-box;
     z-index: 2

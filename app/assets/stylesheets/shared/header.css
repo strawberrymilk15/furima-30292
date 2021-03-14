@@ -13,6 +13,7 @@
 
 .search-bar-contents {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
@@ -40,7 +41,7 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color:maroon;
+  background-color:darkkhaki;
   padding: 8px;
 }
 
@@ -54,8 +55,8 @@
   width: 100%;
 }
 
-.nav-nav {
-  display: table;
+.menu {
+  display: block;
   table-layout: fixed;
   text-align: center;
   width: 100%;
