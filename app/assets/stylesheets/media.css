@@ -28,8 +28,9 @@
 
 
 @media(max-width:580px){
-  img{
+  .img{
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
   .list-pict{
@@ -188,6 +189,9 @@
   }
   .footer>p{
     font-size: 14px;
+  }
+  .select-reason-contents{
+    height: auto;
   }
 
   #wrapper nav {
