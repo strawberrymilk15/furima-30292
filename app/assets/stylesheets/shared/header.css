@@ -21,7 +21,6 @@
 
 .furima-icon {
   width: 200px;
-  margin-right: 100px;
 }
 
 .search-form {
@@ -42,7 +41,7 @@
   border: 0;
   cursor: pointer;
   background-color:darkkhaki;
-  padding: 8px;
+  padding: 5px;
 }
 
 .search-icon {
@@ -56,7 +55,7 @@
 }
 
 .menu {
-  display: block;
+  display: flex;
   table-layout: fixed;
   text-align: center;
   width: 100%;

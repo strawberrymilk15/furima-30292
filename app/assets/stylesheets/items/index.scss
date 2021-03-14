@@ -24,20 +24,17 @@ a {
 
 .service-title {
   color: blanchedalmond;
-  font-size: 6.2vh;
+  font-size: 8vh;
   font-style: oblique;
+  width: 100%;
+  text-align: center;
 }
 
 .service-explain {
   color: azure;
   font-size: 4vh;
-  line-height: 100px;
-}
-
-.store-btn {
-  display: flex;
-  width: 100%;
-  margin-top: 24px;
+  line-height: 50px;
+  margin-top: 50px;
 }
 
 .apple-btn {
@@ -147,10 +144,11 @@ a {
   margin-bottom: 2vh;
   color: burlywood;
   font-style: oblique;
+  margin-left: 120px;
 }
 
 .ad-explain {
-  font-size: 3vh;
+  font-size: 3.5vh;
   line-height: 50px;
   color: aliceblue;
 }
@@ -159,6 +157,7 @@ a {
   display: flex;
   width: 100%;
   margin-top: 24px;
+  margin-left: 300px;
 }
 
 .apple-btn {
@@ -204,7 +203,7 @@ a {
 }
 
 .feature-lists>.list {
-  width: 33vh;
+  width: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;

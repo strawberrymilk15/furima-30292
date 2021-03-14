@@ -1,46 +1,42 @@
-@media(max-width:1024px){
-  img{
-    width: 100%;
-  }
-  .apple-btn,.google-btn{
-    width: 100%;
-  }
-  
-  .service-title{
-    font-size: 5.4vh;
-  }
-  .reason-lists{
-    text-align: center;
-    justify-content: space-around;
-  }
-  .reason-lists>.list{
-    width: 28%;
-  }
-  .service-explain{
-    font-size: 2vh;
-    margin-top: 22px;
-    line-height: 50px;
-  }
-  
-  .feature-lists>.list{
-    width: 28%;
-    text-align: center;
-  }
-  .title-contents{
-    width: 100%;
-  }
-  
-  .ad-footer-explain{
-    margin-bottom: 32px;
-    text-align: center;
-  }
+@media(max-width:768px){
+#wrapper nav ul li {
+  padding: 25px 8px 25px 0px;
+  font-size: 16px;
+}
+.store-btn {
+  margin-left: -13px;
+}
+.reason-lists{
+  justify-content: center;
+}
+.ad-title{
+  font-size: 9vh;
+  margin-left: -36px;
+}
+.ad-footer-explain{
+  font-size: 5vh;
+  margin-bottom: -14px;
+}
+.ad-footer-title{
+  display: none;
+}
 
 }
+
+
+
 
 
 @media(max-width:580px){
   img{
     width: 100%;
+    height: auto;
+  }
+  .list-pict{
+    height: auto;
+  }
+  .service-explain{
+    font-size: 3vh;
   }
 
   .top-page-header{
@@ -69,6 +65,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 24px;
+  }
+
+  .menu{
+    display: block!important;
   }
 
   .furima-icon{
@@ -104,7 +104,7 @@
     line-height: 1;
   }
   .store-btn{
-    display: flex;
+    display: contents;
     margin-top: 24px;
     width: 100%;
     height: 7vh;
@@ -120,11 +120,23 @@
     margin-bottom: 14px;
   }
   .reason-list-number{
-    position: relative;
-    left: -102px;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    background-color:darkcyan;
+    color: #fff;
   }
   .ad-title {
     font-size: 5vh;
+    margin-left: 7px;
+  }
+  .ad-footer-title{
+    display: none;
   }
   .feature-contents>.title{
     font-size: 2.5vh;
@@ -148,29 +160,31 @@
     width:auto;
   }
   .ad-footer-explain{
-    font-size: 5vh;
-    line-height: 56px;
-    margin-top: 225px;
+    font-size: 3.5vh;
+    line-height: 53px;
   }
   .logo-white{
     width: 100%;
   }
   .footer{
-    width: 100%;
     height: auto;
   }
   .footer-contents {
-    margin-right: 20px;
+    width: unset;
+    margin-right: 12px;
     margin-bottom: -1vh;
-    margin-left: 55px;
   }
+  .furima-details{
+    width: 30%;
+  }
+  
+
   .footer-content-head{
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-variant: all-small-caps;
   }
   .footer-link{
-    font-size: 10px;
-    line-height: 28px;
+    font-size: 11px;
+    line-height: 41px;
   }
   .footer>p{
     font-size: 14px;
