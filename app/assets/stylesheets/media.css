@@ -121,16 +121,7 @@
     margin-bottom: 14px;
   }
   .reason-list-number{
-    position: static;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 60px;
-    background-color:darkcyan;
-    color: #fff;
+    display: none;
   }
   .ad-title {
     font-size: 5vh;
@@ -191,7 +182,7 @@
     font-size: 14px;
   }
   .select-reason-contents{
-    height: 1500px;
+    height: auto;
   }
 
   #wrapper nav {
