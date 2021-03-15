@@ -21,6 +21,24 @@
   display: none;
 }
 
+.item-box{
+  min-width: 100%;
+}
+.item-img-content{
+  text-align: center;
+}
+.comment-box{
+  background-color: #f4f5f6;
+}
+.items-sell-footer img{
+  margin-left: 178px;
+}
+.form-wrap{
+  width: 100%;
+}
+
+
+
 }
 
 
@@ -288,7 +306,32 @@
 .content p{
     margin-bottom: 40px;
 }
-  
+
+.item-box{
+  width: 100%;
+  min-width: auto;
+}
+.change-item-btn{
+  font-size: 15px;
+}
+.comment-box{
+  background-color: #f4f5f6;
+}
+.favorite-btn{
+  min-width: 155px;
+}
+.report-btn{
+  min-width: 155px;
+}
+.items-sell-footer img{
+  margin-left: 17px;
+}
+.form-wrap{
+  width: 100%;
+}
+.form-group{
+  width: 81%;
+}
 }
 
 
