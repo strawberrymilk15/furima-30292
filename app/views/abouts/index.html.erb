@@ -1,0 +1,41 @@
+<%= render "shared/header-port"%>
+<div class="about-big">
+<h2 class="about-title">About</h2>
+
+<div class="about-main">
+  <p class="about-text">京都を拠点に活動しているプロモーション会社でホームページをはじめ、ECサイト、<br>
+  その他アプリケーションにおけるweb開発をしております。<br>
+  前職では『料理人』として飲食業界で奮闘しておりました。<br>
+  多くのご縁を経て、現在は『webエンジニア』としてお仕事させていただいております。
+  </p>
+
+  <div class="about-main-2">
+    <div class="about-img-content">
+      <%= image_tag 'about-img.png'  ,class: "about-img"  %>
+    </div>
+    <div class=details-about>
+      <p class="about-details-1">
+      名称:   株式会社 Prémonition<br>
+      拠点:   京都<br>
+      お問い合わせ:   enjin15strawberrymilk@gmail.com<br>
+      事業内容: Web制作におけるディレクション、デザイン、HTML/CSS、
+      要件定義からテストまで、ruby on railsを基盤とした
+      アプリケーション開発、各環境構築・実装、CMSの導入etc...
+      </p>
+      <p class="about-details-2">
+      松井 悠 Yu Matsui<br>
+      Instagram: strawberrymilk_enginir<br>
+      LINE: @257uzyuj
+      </p>
+    </div>
+  </div>
+</div>
+
+<p class="go-p-top">
+      <%= link_to  abouts_path, class: "p-goto-link"  do%>
+        <%= image_tag 'p-goto-img.png', class:"p-goto-img"  %>
+      <%end%>
+  </p>
+  </div>
+
+<%= render "shared/footer-port"%>

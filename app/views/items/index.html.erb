@@ -1,7 +1,6 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
       人生を変えるフリマ<br>
@@ -17,9 +16,8 @@
       <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
     </div>
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
 
-  <%# FURIMAが選ばれる3つの理由部分 %>
+
   <div class='select-reason-contents'>
     <h2 class='title'>
       FURIMATCHが選ばれる3つの理由
@@ -61,9 +59,8 @@
       </li>
     </ul>
   </div>
-  <%# /FURIMAが選ばれる3つの理由部分 %>
 
-  <%# 画面中央の「会員数日本一位」帯部分 %>
+
   <div class='ad-contents'>
     <h2 class='ad-title'>お客様満足度No. 1</h2>
     <p class='ad-explain'>
@@ -77,9 +74,8 @@
       <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
     </div>
   </div>
-  <%# /画面中央の「会員数日本一位」帯部分 %>
 
-  <%# FURIMAの特徴 %>
+
   <div class='feature-contents'>
     <h2 class='title'>
       FURIMATCHの特徴
@@ -114,17 +110,14 @@
       </li>
     </ul>
   </div>
-  <%# /FURIMAの特徴 %>
 
-  <%# 商品一覧 %>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <%= link_to  "新規登録商品",new_user_session_path, class: "subtitle" %>
     <ul class='item-lists'>
       <%if Item.exists?%>
         <% @items.each do |item| %>
-        
-      <li class='list'>
+        <li class='list'>
       
         <%= link_to item_path(item.id) do %>
 
@@ -180,7 +173,7 @@
       </li>
     </ul>
   </div>
-  <%# /商品一覧 %>
+
 </div>
 <%= link_to new_item_path, class: 'purchase-btn' do %>
   <span class='purchase-btn-text'>出品する</span>

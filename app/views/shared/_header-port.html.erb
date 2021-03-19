@@ -1,0 +1,29 @@
+<header class="p-header">
+    <p class="p-header-logo">
+     <%= link_to portfolios_path, class: "p-header-link"  do%>
+     <%= image_tag 'portfolio-header-logo.png', class:"p-logo-img" %>
+     <%end%>
+    </p>
+  <nav>
+   <ul class="p-nav">
+    <li><%= link_to 'About', abouts_path, class: "p-header-link" %></li>
+    <li><%= link_to 'Works', portfolios_path, class: "p-header-link" %></li>
+    <li><%= link_to 'MyBlog', "https://yunuposu.com", class: "p-header-link" %></li>
+    <li><%= link_to 'Contact', new_contact_path, class: "p-header-link" %></li>
+   </ul>
+  </nav>
+  <ul class="social-btn">
+    <li><%= link_to  "https://www.instagram.com/strawberrymilk_enginir/", class: "p-heade-link" do %>
+      <%= image_tag 'insta-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+    <li><%= link_to  "https://www.facebook.com/profile.php?id=100005896531135", class: "p-heade-link" do %>
+      <%= image_tag 'fb-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+    <li><%= link_to  "https://yunuposu.com", class: "p-heade-link" do %>
+      <%= image_tag 'blog-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+  </ul>
+</header>

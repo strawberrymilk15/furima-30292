@@ -1,0 +1,28 @@
+<h2 class="contact-confirm-title">お問合わせ内容管理ページ</h2>
+<p class="concon">問い合わせ内容一覧</p>
+<div class="contact-box">
+
+  <ul class="contact-lists">
+    
+      <%@contacts.each do |c|%>
+      <li class="contact-list">
+      <%= link_to contact_path(c.id) do%>
+
+      <div class="contact-info">
+        <h3 class="contact-name">
+        件名<br>
+          <%=c.name%>
+        </h3>
+        <p class="contact-messtext">
+        お問い合わせ内容<br>
+          <%=c.message%>
+        </p>
+       </div>
+    </li>
+    <%end%>
+  <%end%>
+  </ul>
+  <p class="contact-mane-back">
+  <%=link_to "サイトへ戻る" , portfolios_path%>
+  </p>
+</div>

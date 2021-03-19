@@ -1,0 +1,158 @@
+<header class="p-header">
+    <p class="p-header-logo">
+     <%= link_to portfolios_path, class: "p-header-link"  do%>
+     <%= image_tag 'portfolio-header-logo.png', class:"p-logo-img" %>
+     <%end%>
+    </p>
+  <nav>
+   <ul class="p-nav">
+    <li><%= link_to 'About', abouts_path, class: "p-header-link" %></li>
+    <li><%= link_to 'Works', portfolios_path, class: "p-header-link" %></li>
+    <li><%= link_to 'MyBlog',"https://yunuposu.com", class: "p-header-link" %></li>
+    <li><%= link_to 'Contact', new_contact_path, class: "p-header-link" %></li>
+   </ul>
+  </nav>
+  <ul class="social-btn">
+    <li><%= link_to  "https://www.instagram.com/strawberrymilk_enginir/", class: "p-heade-link" do %>
+      <%= image_tag 'insta-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+    <li><%= link_to  "https://www.facebook.com/profile.php?id=100005896531135", class: "p-heade-link" do %>
+      <%= image_tag 'fb-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+    <li><%= link_to  "https://yunuposu.com", class: "p-heade-link" do %>
+      <%= image_tag 'blog-icon.png', class:"p-logo-social-img" %>
+      <%end%>
+    </li>
+  </ul>
+</header>
+
+<div id="p-main" >
+  <div id="p-main1">
+    <div class="p-main1-pc">
+      <%= image_tag 'p-main.png', class:"p-main-img" %>
+    </div>
+  </div>
+  
+ <h2 class="my-service-title">Service</h2> 
+<section id="my-service" >
+    <section class="p-section">
+      <p class="section-title">ディレクション</p>
+      <h6 class="section-title">DIRECTION</h6>
+      <p><%= image_tag 'direction-img.png'  ,class: "p-service-img"  %></p>
+      <p class="p-main-text">"お客様の要望をヒアリングし、現状の問題点を洗い出し、効果を生み出せるプランを作成いたします。
+      制作ではデザインに入る前の事前準備が特に重要となります。必要な物は何か、不必要な物は何かを判断し、
+      費用対効果の高いWEBサイトを作るための土台づくりをします"</p>
+      </section>
+
+    <section class="p-section">
+      <h3 class="section-title">デザイン</h3>
+      <h6 class="section-title">DESIGN</h6>
+      <p><%= image_tag 'design-img.png' ,class: "p-service-img" %></p>
+      <p class="p-main-text">"ヒアリングに基づき、プランに沿ったデザインを作成いたします。お客様に最適な企画・提案ができるよう心がけています。
+      常に「使いやすい」をテーマにしており、見た目・動き一つ、丁寧に作らせていただきます"</p>
+    </section>
+
+     <section class="p-section">
+      <h3 class="section-title">コーディング</h3>
+      <h6 class="section-title">CODING</h6>
+      <p><%= image_tag 'coding-img.png' ,class: "p-service-img"  %></p>
+      <p class="p-main-text">"デザインとの調和を大事にし、サイトの意図にあった動きや効果を適切に使用する事でWEBサイトをより良い仕上がりにします。
+      タブレットやスマートフォンに対応したサイト、WordPressを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイト、Rubyを使った
+      WEBアプリケーションなど、様々なコーディングを行っております"</p>
+    </section>
+
+  
+  </section>
+
+
+
+
+  <section class="p-ghost"></section>
+
+  <h2 class="my-service-title">Works</h2>
+  <section id="my-service" class="p-section">
+    <ul class="works-list">
+      <li class="workss-list">
+        <div>
+          <%= link_to  "https://furima-30292.herokuapp.com/", class: "p-heade-link" do %>
+            <%= image_tag 'p-work-1.png', class:"p-works-img" %>
+            <%end%>
+            <p class="p-work-title">フリマ×マッチングアプリ<br>『FURIMATCH』</p>
+        </div>
+      </li>
+
+      <li class="workss-list">
+        <div class="photo">
+          <%= link_to  "https://yunuposu.com", class: "p-heade-link" do %>
+            <%= image_tag 'p-work-2.png', class:"p-works-img"  %>
+            <%end%>
+            <p class="p-work-title">個人ブログサイト<br>『ゆんちょの料理研究室』</p>
+        </div>
+      </li>
+
+      
+    </ul>
+  </section>
+
+  <section class="p-ghost"></section>
+
+  <h2 class="my-service-title">Skills</h2>
+  <section id="my-skills" class="p-section-skills">
+    <div class="p-skills">
+      <%= image_tag 'skills-1.png', class:"p-works-img"  %>
+    </div>
+    <div>
+      <%= image_tag 'skills-2.png', class:"p-works-img"  %>
+    </div>
+    <div>
+      <%= image_tag 'skills-3.png', class:"p-works-img"  %>
+    </div>
+  </section>
+
+  <section class="p-ghost"></section>
+
+  <p class="go-p-top">
+      <%= link_to  portfolios_path, class: "p-goto-link"  do%>
+        <%= image_tag 'p-goto-img.png', class:"p-goto-img"  %>
+      <%end%>
+  </p>
+
+  <footer class="p-nav">
+      <ul class="p-nav-footer">
+        <li><%= link_to 'About', abouts_path, class: "p-header-link" %></li>
+        <li><%= link_to 'Works', portfolios_path, class: "p-header-link" %></li>
+        <li><%= link_to 'MyBlog', "https://yunuposu.com", class: "p-header-link" %></li>
+        <li><%= link_to 'Contact', new_contact_path, class: "p-header-link" %></li>
+        <li><%= link_to 'FURIMATCHへ戻る', root_path, class: "p-header-link" %></li>
+      
+  
+  <p id="copyright">
+    <small>©︎ Yu Matsui All rights reserved.</small>
+  </p>
+  
+  </ul>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

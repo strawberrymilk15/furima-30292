@@ -1,0 +1,129 @@
+.contact-titles{
+  text-align: center;
+  padding: 20px;
+  font-style: oblique;
+  font-family: serif;
+  font-weight: 900;
+  font-size: 50px;
+}
+p.contact-text{
+  text-align: center;
+  font-style: italic;
+  font-family: serif;
+}
+.contact-box2{
+  display: grid;
+  padding: 65px;
+}
+.contact-head{
+  background-color: whitesmoke;
+}
+input#contact_name{
+  font-style: italic;
+  font-family: sans-serif;
+}
+textarea#contact_message{
+  font-style: italic;
+  font-family: sans-serif;
+}
+input[type="submit"]{
+  font-style: oblique;
+  font-family: serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+p.contact-back{
+  text-align: center;
+  padding: 50px;
+}
+a.contact-back-link{
+  margin-right: 100px;
+  color: darkkhaki;
+  font-style: oblique;
+  font-family: serif;
+}
+a.contact-back-link2{
+  color: darkkhaki;
+  font-style: oblique;
+  font-family: serif;
+}
+h2.contact-confirm-title{
+  text-align: center;
+  padding: 30px;
+  font-style: oblique;
+  font-family: serif;
+  background-color: black;
+  font-size: 40px;
+  color: ghostwhite;
+}
+a.contact-box-link{
+  margin-left: 40%;
+  font-style: italic;
+  font-family: serif;
+  font-weight: 900;
+  color: black;
+  font-size: 25px;
+}
+.contact-box{
+  padding: 135px;
+  background-color: ghostwhite;
+}
+.contact-lists{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: gainsboro;
+  border-radius: 20px;
+  border: groove;
+}
+li.contact-list{
+  width: 30%;
+  height: auto;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+h3.contact-name{
+  font-style: oblique;
+  font-family: sans-serif;
+  color: black;
+}
+p.contact-messtext{
+  font-style: italic;
+  font-family: monospace;
+  color: black;
+}
+p.concon{
+  background-color: gainsboro;
+  text-align: center;
+  font-style: oblique;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size:25px;
+}
+.contact-mane-back{
+  text-align: center;
+  margin: 50px;
+}
+.contact-details{
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+p.contact-name{
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 800;
+  text-decoration-line:underline ;
+}
+p.contact-message{
+  outline-style: double;
+  font-style: oblique;
+}
+.contact-delate{
+ margin-top: 20px;
+ font-style: italic;
+ font-family: serif;
+ font-weight: 900;
+}

@@ -1,0 +1,16 @@
+<h2 class="contact-confirm-title">お問合わせ内容管理ページ</h2>
+<p class="concon">問い合わせ内容詳細</p>
+<div class="contact-show">
+  <div class="contact-details">
+    <p class="contact-name"><%=@contact.name%></p>
+    <p class="contact-message"><%=@contact.message%></p>
+    <p class="contact-delate">
+    <%= link_to '削除', contact_path(@contact.id), method: :delete, class:'contact-destroy' %>
+    </p>
+  </div>
+</div>
+
+<p class="contact-mane-back">
+  <%=link_to "一覧へ戻る" , contacts_path%>
+  </p>
+</div>

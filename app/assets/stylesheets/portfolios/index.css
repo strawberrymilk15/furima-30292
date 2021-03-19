@@ -1,0 +1,146 @@
+.p-header-logo{
+  background-color:white;
+  width: 100%;
+  height: 350px;
+}
+.p-logo-img{
+  height: 350px;
+  display: block;
+  margin: auto;
+}
+
+.p-nav{
+    display: flex;
+    list-style-type: none;
+    background-color: whitesmoke;
+}
+p-header{
+  background-color: black;
+}
+a.p-header-link{
+  padding-right: 20px;
+  font-family: cursive;
+  font-style: italic;
+  width: 100%;
+  color:black;
+  height: auto;
+}
+ul.social-btn{
+  display: flex;
+  height: 31px;
+  background-color: black;
+  justify-content: flex-end;
+}
+.p-heade-link{
+  font-style: italic;
+  font-family: cursive;
+  color: ghostwhite;
+  margin-right: 30px;
+}
+.p-logo-social-img{
+  height: 30px;
+  width: 30px;
+}
+#p-main1{
+  background-color: black;
+  text-align: center;
+}
+.p-main-pc{
+  display: block;
+}
+.p-main-img{
+  width: 100%;
+  height: auto;
+}
+#my-service{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+h2.my-service-title{
+  text-align: center;
+  font-size: 35px;
+  font-style: italic;
+  font-family: serif;
+  margin-bottom: 20px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+section.p-section{
+  width: 30%;
+  display: inline-table;
+  text-align: center;
+}
+h3.section-title{
+  font-style: italic;
+  font-size: 30px;
+  font-family: serif;
+}
+p.p-main-text{
+  font-style: oblique;
+}
+h6.section-title{
+  color: burlywood;
+  font-weight: 900;
+}
+.p-service-img{
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.p-works-img{
+  width: 100%;
+  height: auto;
+}
+ul.works-list{
+  display: flex;
+  background-color: ghostwhite;
+  width: 100%;
+  flex-wrap: wrap;
+}
+li{
+  display: inline-flex;
+}
+section.p-ghost{
+  width: 100%;
+  height: 7px;
+  background-color: black;
+}
+
+.p-goto-link{
+  font-family: serif;
+  color: aqua;
+}
+
+.go-p-top{
+  text-align: center;
+  height: 200px;
+}
+.p-goto-img{
+  height: 70px;
+  width: 50px;
+  margin: 75px;
+}
+.p-nav-footer{
+  display: flex;
+    list-style-type: none;
+    background-color: whitesmoke;
+}
+#my-skills{
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.p-work-title{
+  font-style: italic;
+  font-family: serif;
+  font-size: 30px;
+  text-align: center;
+}
+nav.p-footer{
+  width: 100%;
+  height: auto;
+}

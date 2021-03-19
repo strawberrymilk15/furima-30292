@@ -1,0 +1,5 @@
+<%=form_with(url:"contacts#create",model:@conact, local:true) do |f|%> 
+  <%=f.text_field :name,placeholder:"件名"%>
+  <%=f.text_area :message,placeholder:"お問い合わせ内容", rows:"10"%>
+  <%=f.submit "送信"%>
+<%end%>

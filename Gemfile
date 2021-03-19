@@ -54,6 +54,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -80,3 +81,5 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth','~>1.9.1'
 gem 'ransack'
+gem 'dotenv-rails'
+gem 'bootstrap-form'

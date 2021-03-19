@@ -1,0 +1,26 @@
+<div class="contact-head">
+<h2 class="contact-titles">Contact</h2>
+
+<div class="contact-form">
+  <div class="contact-form-de">
+  <%=form_with(model:@contact, local:true) do |f|%> 
+  <p class="contact-text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
+    下記フォームよりご記入ください。
+  </p>
+  <div class="contact-box2">
+  <%=f.text_field :name,placeholder:"件名"%>
+  <%=f.text_area :message,placeholder:"お問い合わせ内容", rows:"10"%>
+  <%=f.submit "送信"%>
+<%end%>
+  </div>
+ </div>
+ <p class="contact-back">
+ <%= link_to "戻る", root_path,class:"contact-back-link"%>
+ <%if user_signed_in?%>
+ <%if current_user.admin?%>
+ <%= link_to "管理ページへ",contacts_path, class:"contact-back-link2"%>
+ <%end%>
+<%end%>
+ </p>
+</div>
+</div>

@@ -1,0 +1,2 @@
+module DestroyContactsHelper
+end

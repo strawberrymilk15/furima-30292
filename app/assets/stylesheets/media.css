@@ -36,6 +36,23 @@
 .form-wrap{
   width: 100%;
 }
+section.p-section{
+  padding-left: 55px;
+  margin-bottom: 30px;
+  height: auto;
+}
+.about-main-2{
+  display: list-item;
+}
+p.contact-back{
+  padding: 200px;
+}
+li.contact-list{
+  margin: 50px;
+}
+.contact-box{
+  padding: 130px;
+}
 
 
 
@@ -332,6 +349,36 @@
 .form-group{
   width: 81%;
 }
+.p-logo-img{
+  height: 350px;
+  width: 350px;
+}
+
+h3.section-title{
+  margin-top: 35px;
+}
+ul.social-btn{
+  justify-content: space-evenly;
+}
+section.p-section{
+  width: 33%;
+  padding: 30px;
+}
+#copyright{
+  display: none;
+}
+.contact-box2{
+  padding: 80px;
+}
+p.contact-back{
+  padding: 70px;
+}
+
+
+
+
+
+
 }
 
 
